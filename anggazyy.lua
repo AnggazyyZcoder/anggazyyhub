@@ -110,7 +110,7 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footag
 task.spawn(function()
     task.wait(1) -- Tunggu sebentar agar UI siap
     WindUI:Popup({
-        Title = "TES NOTIFsjjajajasj!",
+        Title = "TES NOTIF 222!",
         Icon = "fish",
         Content = "Thank you for using Anggazyy Hub - Fish It Automation\n\nScript ini 100% Gratis dan tidak diperjualbelikan",
         Buttons = {
@@ -418,76 +418,22 @@ local function BlatantCastMethod3()
     return success
 end
 
--- Main blatant casting function yang mencoba semua method (dengan notifikasi error per method)
+-- Main blatant casting function yang mencoba semua method
 local function BlatantCastFishingRod()
-    
-    -- [PERBAIKAN] Coba method 2 (Direct server call) DULUAN
-    local success = BlatantCastMethod2()
-    
+    -- Coba method 1: RequestChargeFishingRod dengan bypass
+    local success = BlatantCastMethod1()
     if success then
-        -- SUKSES Method 2
-        print("✅ Blatant Cast: Method 2 (Direct) successful")
-        Notify({
-            Title = "⚡ Blatant Cast", 
-            Content = "Cast successful (Method 2: Direct)", 
-            Duration = 2
-        })
-        return true
-    else
-        -- GAGAL Method 2
-        print("⚠️ Blatant Cast: Method 2 failed, trying Method 3...")
-        Notify({
-            Title = "⚠️ Cast Warning", 
-            Content = "Method 2 (Direct) failed. Trying next...", 
-            Duration = 2
-        })
-    end
-    
-    -- Coba method 3 (SendFishingRequest) sebagai alternatif kedua
-    success = BlatantCastMethod3()
-    
-    if success then
-        -- SUKSES Method 3
-        print("✅ Blatant Cast: Method 3 successful")
-        Notify({
-            Title = "⚡ Blatant Cast", 
-            Content = "Cast successful (Method 3: Request)", 
-            Duration = 2
-        })
-        return true
-    else
-        -- GAGAL Method 3
-        print("⚠️ Blatant Cast: Method 3 failed, trying Method 1 (Fallback)...")
-        Notify({
-            Title = "⚠️ Cast Warning", 
-            Content = "Method 3 (Request) failed. Trying fallback...", 
-            Duration = 2
-        })
-    end
-    
-    -- Coba method 1 (RequestChargeFishingRod) sebagai fallback terakhir
-    success = BlatantCastMethod1()
-    
-    if success then
-        -- SUKSES Method 1
-        print("✅ Blatant Cast: Method 1 (Fallback) successful")
-        Notify({
-            Title = "⚡ Blatant Cast", 
-            Content = "Cast successful (Method 1: Fallback)", 
-            Duration = 2
-        })
+        print("✅ Blatant Cast: Method 1 successful")
         return true
     end
     
-    -- GAGAL SEMUA METHOD
-    print("❌ Blatant Cast: All methods failed")
-    Notify({
-        Title = "❌ Blatant Cast Failed", 
-        Content = "All casting methods failed. Retrying...", 
-        Duration = 3
-    })
-    return false
-end
+    -- Coba method 2: Direct server call
+    success = BlatantCastMethod2()
+    if success then
+        print("✅ Blatant Cast: Method 2 successful")
+        return false
+    end
+    
 
 
 -- =============================================================================
