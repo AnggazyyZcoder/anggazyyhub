@@ -417,26 +417,17 @@ end
 -- Main blatant casting function yang mencoba semua method
 local function BlatantCastFishingRod()
     
-    -- [PERBAIKAN] Coba method 2 (Direct server call) DULUAN,
-    -- karena ini "instant" dan tidak memicu "charge"
+    -- Coba method 2: Direct server call
     local success = BlatantCastMethod2()
     if success then
-        print("✅ Blatant Cast: Method 2 (Direct) successful")
+        print("✅ Blatant Cast: Method 2 successful")
         return true
     end
     
-    -- Coba method 3 (SendFishingRequest) sebagai alternatif kedua
+    -- Coba method 3: SendFishingRequestToServer langsung
     success = BlatantCastMethod3()
     if success then
         print("✅ Blatant Cast: Method 3 successful")
-        return true
-    end
-    
-    -- Coba method 1 (RequestChargeFishingRod) sebagai fallback terakhir
-    -- Ini adalah metode "charge" yang ingin Anda hindari
-    success = BlatantCastMethod1()
-    if success then
-        print("✅ Blatant Cast: Method 1 (Fallback) successful")
         return true
     end
     
