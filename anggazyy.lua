@@ -1,5 +1,8 @@
-
-
+--//////////////////////////////////////////////////////////////////////////////////
+-- Anggazyy Hub - Fish It (FINAL) + Weather Machine + Trick or Treat + Blatant Fishing
+-- WindUI Version - Modern, Mobile-Friendly Design
+-- Author: Anggazyy (refactor)
+--//////////////////////////////////////////////////////////////////////////////////
 
 -- CONFIG: ubah sesuai kebutuhan
 local AUTO_FISH_REMOTE_NAME = "UpdateAutoFishingState"
@@ -107,7 +110,7 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footag
 task.spawn(function()
     task.wait(1) -- Tunggu sebentar agar UI siap
     WindUI:Popup({
-        Title = "Welcome to Anggazyy Hub!",
+        Title = "TES NOTIF!",
         Icon = "fish",
         Content = "Thank you for using Anggazyy Hub - Fish It Automation\n\nScript ini 100% Gratis dan tidak diperjualbelikan",
         Buttons = {
