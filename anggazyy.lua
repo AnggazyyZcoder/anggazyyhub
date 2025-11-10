@@ -110,7 +110,7 @@ local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footag
 task.spawn(function()
     task.wait(1) -- Tunggu sebentar agar UI siap
     WindUI:Popup({
-        Title = "TES NOTIF 222!",
+        Title = "TES NOTIF 222KKKK!",
         Icon = "fish",
         Content = "Thank you for using Anggazyy Hub - Fish It Automation\n\nScript ini 100% Gratis dan tidak diperjualbelikan",
         Buttons = {
