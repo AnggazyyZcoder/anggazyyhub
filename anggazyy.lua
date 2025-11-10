@@ -1,5 +1,6 @@
 
 
+
 -- CONFIG: ubah sesuai kebutuhan
 local AUTO_FISH_REMOTE_NAME = "UpdateAutoFishingState"
 local NET_PACKAGES_FOLDER = "Packages"
@@ -416,9 +417,15 @@ end
 
 -- Main blatant casting function yang mencoba semua method
 local function BlatantCastFishingRod()
+    -- Coba method 1: RequestChargeFishingRod dengan bypass
+    local success = BlatantCastMethod1()
+    if success then
+        print("✅ Blatant Cast: Method 1 successful")
+        return true
+    end
     
     -- Coba method 2: Direct server call
-    local success = BlatantCastMethod2()
+    success = BlatantCastMethod2()
     if success then
         print("✅ Blatant Cast: Method 2 successful")
         return true
